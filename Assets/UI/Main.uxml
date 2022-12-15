@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Main.uss?fileID=7433441132597879392&amp;guid=add7b59343c1f2f4b922971c4fd02eb2&amp;type=3#Main" />
+    <ui:GroupBox name="MainGroupBox" style="flex-direction: row; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+        <ui:GroupBox name="LeftGroupBox" style="height: 100%; width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; background-color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill;">
+            <ui:TextField picking-mode="Ignore" label="WebUI API URL" name="ServerTextField" value="https://camenduru-webui-api.hf.space" text="https://camenduru-webui-api.hf.space" style="display: flex; visibility: visible;" />
+            <ui:TextField picking-mode="Ignore" label="WebUI API Auth" name="AuthTextField" value="seamless:test" text="seamless:test" style="display: flex; visibility: visible;" />
+            <ui:DropdownField label="Model" index="-1" name="ModelDropdown" style="width: auto; justify-content: flex-start; align-items: center;">
+                <ui:Button tabindex="-1" text="↻" display-tooltip-when-elided="true" name="RefreshModelButton" />
+            </ui:DropdownField>
+            <ui:DropdownField label="Sampler" index="-1" name="SamplerDropdown" style="width: auto; align-items: center;">
+                <ui:Button text="↻" display-tooltip-when-elided="true" name="RefreshSamplerButton" tabindex="-1" style="align-items: auto; flex-direction: column; justify-content: flex-start;" />
+            </ui:DropdownField>
+            <ui:Slider picking-mode="Ignore" label="Sampling Steps" value="50" high-value="150" name="SamplingStepsSlider" low-value="1" show-input-field="true" inverted="false" focusable="true" usage-hints="None" direction="Horizontal" class="unity-text-field" style="visibility: visible; overflow: visible; display: flex; opacity: 1;" />
+            <ui:Slider picking-mode="Ignore" label="Width" value="512" high-value="1024" name="WidthSlider" low-value="64" show-input-field="true" focusable="true" tabindex="0" usage-hints="None" class="unity-text-field" />
+            <ui:Slider picking-mode="Ignore" label="Height" value="512" high-value="1024" name="HeightSlider" low-value="64" show-input-field="true" focusable="true" />
+            <ui:Slider picking-mode="Ignore" label="CFG Scale" value="7" high-value="30" name="CFGScaleSlider" low-value="1" show-input-field="true" focusable="true" />
+            <ui:TextField picking-mode="Ignore" label="Seed" name="SeedTextField" text="-1" value="-1" />
+            <ui:TextField picking-mode="Ignore" label="Prompt" name="PromptTextField" style="align-items: auto; flex-direction: row; width: auto;" />
+            <ui:TextField picking-mode="Ignore" label="Negative Prompt" name="NegativePromptTextField" style="align-items: auto; flex-direction: row; width: auto;" />
+            <ui:ProgressBar name="GenerateProgressBar" binding-path="progress" high-value="1" />
+            <ui:GroupBox style="flex-direction: row; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                <ui:Button tabindex="-1" text="Generate" display-tooltip-when-elided="true" name="GenerateButton" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px;" />
+                <ui:Button text="Save" display-tooltip-when-elided="true" name="SaveButton" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px; overflow: hidden; width: 50%; -unity-text-align: middle-center;" />
+            </ui:GroupBox>
+            <ui:ScrollView style="height: 200px;">
+                <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="TestLabel" focusable="false" style="white-space: normal; height: auto;" />
+            </ui:ScrollView>
+            <ui:Slider picking-mode="Ignore" label="Tile Width" value="1" high-value="10" name="TileWidthSlider" low-value="1" show-input-field="true" />
+        </ui:GroupBox>
+        <ui:GroupBox name="RightGroupBox" style="height: 100%; width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+            <ui:VisualElement name="ImageVisualElement" style="height: 512px; width: 512px;" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

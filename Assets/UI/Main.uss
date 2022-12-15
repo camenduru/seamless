@@ -1,0 +1,19 @@
+.unity-slider > .unity-label {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 1;
+    width: 160px;
+}
+
+.unity-slider > .unity-slider__input > .unity-text-field {
+    opacity: 1;
+    height: auto;
+    width: 60px;
+    -unity-text-align: upper-left;
+}
+
+.unity-slider > .unity-slider__input > .unity-text-field > .unity-text-field__input {
+    -unity-text-align: upper-center;
+}
