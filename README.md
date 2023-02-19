@@ -4,9 +4,6 @@
 - https://github.com/Nateonus/WebGLFileSaverForUnity for WebGL File Saver For Unity 
 - https://github.com/ZayshaaCodes/SD_Asset for Stable Diffusion tool for Unity Editor
 
-## Working Example
-- https://huggingface.co/spaces/camenduru/seamless
-
 ## How To Use
 - Download and unzip WebGL.zip from https://github.com/camenduru/seamless/releases 
 - Enter the unzipped directory run command `python -m http.server`
